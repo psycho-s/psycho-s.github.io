@@ -12,12 +12,25 @@ var musicBanner = document.getElementById("musicBanner");
 var musicEndBanner = document.getElementById("musicEndBanner");
 var isPlaying = false;
 
+// 检查弹窗是否已显示过
+function hasShownBanner(bannerId) {
+    return localStorage.getItem(bannerId + 'Shown') === 'true';
+}
+
+// 标记弹窗已显示
+function markBannerAsShown(bannerId) {
+    localStorage.setItem(bannerId + 'Shown', 'true');
+}
+
 // 监听音乐播放结束事件
 music.addEventListener('ended', function() {
     isPlaying = false;
     musicIndicator.textContent = "🎵";
     musicIndicator.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
-    showBanner('musicEndBanner');
+    if (!hasShownBanner('musicEndBanner') && !hasShownBanner('musicBanner')) {
+        showBanner('musicEndBanner');
+        markBannerAsShown('musicEndBanner');
+    }
 });
 
 // 尝试自动播放
@@ -34,7 +47,10 @@ window.addEventListener('load', function() {
         .catch(error => {
             // 自动播放被阻止，显示通知栏
             console.log("自动播放被阻止，显示通知栏");
-            showBanner('musicBanner');
+            if (!hasShownBanner('musicBanner')) {
+                showBanner('musicBanner');
+                markBannerAsShown('musicBanner');
+            }
         });
     }
 });
