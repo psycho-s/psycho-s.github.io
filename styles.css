@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff3e0; /* 米白色背景 */
+    color: #4e342e; /* 深棕色文字 */
+}
+
+header {
+    background-color: #a5a19e; /* 深橙色背景 */
+    padding: 70px; /* 使用 padding 代替固定高度 */
+    position: relative; /* 为绝对定位的子元素提供参考 */
+}
+
+.light-panel {
+    background-color: #333760; /* 纯浅灰色背景，去掉透明度 */
+    padding: 20px;
+    margin: 10px; /* 四周都有 10px 的外边距 */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: absolute; /* 使用绝对定位 */
+    top: 10px;
+    left: 20px;
+    right: 50%;
+    bottom: 10px;
+    display: flex; /* 使用 flex 布局 */
+    flex-direction: row; /* 垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    color: #b28099;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center; /* 文本居中 */
+    margin-right: 50px
+}
+
+main {
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+    margin: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main-image-container {
+    margin-bottom: 20px; /* 图片之间的间距 */
+    width: 100%; /* 使所有图片容器宽度相同 */
+}
+
+.main-image {
+    max-width: 30%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    float: left; /* 使图片浮动到左侧 */
+    margin-right: 20px; /* 在图片右侧添加一些间距，使文字不会紧贴图片 */
+    margin-bottom: 10px; /* 在图片下方添加一些间距 */
+}
+
+.main-image:hover {
+    transform: scale(1.05);
+}
+
+/* 可选：为链接添加样式 */
+a {
+    color: #e65100;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header-image {
+    max-width: 10%; /* 图片最大宽度为容器的 40% */
+    height: auto; /* 保持图片比例 */
+    border-radius: 5px; /* 添加圆角 */
+    display: block; /* 使图片显示为块级元素 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 添加轻微阴影 */
+}
+
+.main-nav {
+    background-color: #f0f0f0;
+    padding: 15px 0;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #FF69B4; /* 使用与标题相同的粉色 */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-content {
+    text-align: left; /* 文本居中 */
+    line-height: 1.5;
+    max-width: 80%; /* 控制文本宽度，可以根据需要调整 */
+    margin-left: 50%;
+    margin-top: -10px;
+}
+
+blockquote {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 22px;
+    /* font-style: italic; */
+    color: #49633d;
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+.left-column {
+    flex: 1;
+    margin-right: 20px; /* 为右侧图片列留出空间 */
+}
+
+.main-image-container,
+.additional-image-container {
+    margin-bottom: 20px; /* 图片之间的间距 */
+    width: 100%; /* 使所有图片容器宽度相同 */
+}
+
+.main-image,
+.additional-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover,
+.additional-image:hover {
+    transform: scale(1.05);
+}
+
+.right-column {
+    width: 20%; /* 调整这个值以适应您的设计 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 30px;
+}
+
+.additional-image-container {
+    margin-bottom: 20px; /* 图片之间的间距 */
+    width: 100%; /* 使所有图片容器宽度相同 */
+}
+
+.additional-image {
+    width: 110%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
