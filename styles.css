@@ -84,6 +84,26 @@ a:hover {
     border-radius: 5px; /* 添加圆角 */
     display: block; /* 使图片显示为块级元素 */
     box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 添加轻微阴影 */
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.header-image:hover {
+    opacity: 0.8;
+}
+
+#musicIndicator {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
 }
 
 .main-nav {
