@@ -27,7 +27,7 @@ music.addEventListener('ended', function() {
     isPlaying = false;
     musicIndicator.textContent = "🎵";
     musicIndicator.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
-    if (!hasShownBanner('musicEndBanner') && !hasShownBanner('musicBanner')) {
+    if ((!hasShownBanner('musicEndBanner')) && (!hasShownBanner('musicBanner'))) {
         showBanner('musicEndBanner');
         markBannerAsShown('musicEndBanner');
     }
