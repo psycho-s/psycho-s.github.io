@@ -9,6 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+SC:wght@400;700&family=Ma+Shan+Zheng&family=Caveat&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="musicBanner" class="banner">
+        <p>自动播放被阻止，自己找找播放按钮吧～</p>
+        <button onclick="closeBanner()">yes, minister</button>
+    </div>
+
+    <div id="musicEndBanner" class="banner">
+        <p>放完啦！自己找播放键吧～</p>
+        <button onclick="closeBanner('musicEndBanner')">yes, minister</button>
+    </div>
+
     <header>
         <!-- 深色背景区域 -->
         <div class="light-panel">
@@ -18,7 +28,7 @@
         </div>
     </header>
 
-    <audio id="bgMusic" loop autoplay>
+    <audio id="bgMusic" autoplay>
         <source src="audio/xh.mp3" type="audio/mpeg">
         您的浏览器不支持音频元素。
     </audio>
